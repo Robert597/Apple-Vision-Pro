@@ -1,0 +1,83 @@
+//Import fonts
+@font-face {
+    font-family: Neue Montreal;
+    src: url(Fonts/neue/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+    font-family: Neue Medium;
+    src: url(Fonts/neue/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: Neue Bold;
+    src: url(Fonts/neue/NeueMontreal-Bold.otf);
+}
+@font-face {
+    font-family: Sf Pro Display;
+    src: url(Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf);
+}
+@font-face {
+    font-family: Sf Pro Medium;
+    src: url(Fonts/SFPRODISPLAYMEDIUM.OTFs/);
+}
+@font-face {
+    font-family: Sf Pro Regular;
+    src: url(Fonts/SFPRODISPLAYREGULAR.OTF);
+}
+@font-face {
+    font-family: Monument Extended;
+    src: url(Fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+};
+
+//Color variables
+$primary: #000000;
+$secondary: #ffffff;
+$tertiary: #F25922;
+$complementary: #8D8C91;
+$little: #454547;
+
+//Font variables
+$heading-font: Sf Pro Display;
+$heading-medium: Sf Pro Medium;
+$text-font: Neue Montreal;
+$text-font-medium: Neue Medium;
+$text-font-bold: Neue Bold;
+$text-footer: Monument Extended;
+
+//Font Sizes
+$large: 260px;
+$heading: 64px;
+$text-heading: 40px;
+$normal-text: 24px;
+$large-text: 32px;
+$mobile-nav: 48;
+
+//spacing
+$large-space: 40px;
+$small-space: 20px;  
+
+//breakpoints
+
+$breakpoints: (
+    "xs": 399px,
+    "xsmm": 480px,
+    "xsm": 600px,
+    "sm": 760px,
+    "md": 900px,
+    "md-l": 1050px,
+    "lg": 1200px,
+);
+
+@mixin breakpoint($screen-value){
+    $mymap: map-get($breakpoints,$screen-value);
+    
+    @if $mymap{
+        @media (max-width: $mymap) {
+            @content;
+        }
+    } @else{
+        @error "ooops, couldn't find breakpoint"
+    }
+   
+};
