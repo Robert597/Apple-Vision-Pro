@@ -3,11 +3,12 @@ import Vision from "../../Assets/vision pro 2/apple_vision_main2.png";
 import "../../Styles/banner.scss";
 import {gsap} from 'gsap';
 import Navbar from "../Navbar/Navbar";
-import Gif1 from "../../Assets/vision pro 2/gif1.gif";
-import Gif2 from "../../Assets/vision pro 2/gif2.gif";
-import Gif3 from "../../Assets/vision pro 2/gif3.gif";
-import Gif4 from "../../Assets/vision pro 2/gif4.gif";
-import Gif5 from "../../Assets/vision pro 2/gif5.gif";
+import Gif1 from "../../Assets/vision pro 2/vision_white_left.jpg";
+import Gif2 from "../../Assets/vision pro 2/glass.jpg";
+import Gif3 from "../../Assets/vision pro 2/glass1.jpg";
+import Gif4 from "../../Assets/vision pro 2/vision_eye_tracking.jpg";
+import Gif5 from "../../Assets/vision pro 2/Apple.jpg";
+import Gif6 from "../../Assets/vision pro 2/dark_glass.jpg";
 const Banner = () => {
   let tl2 = gsap.timeline({
     paused: true
@@ -47,7 +48,7 @@ const Banner = () => {
  
    let percent = 1;
     let elementP = document.getElementById("percent");
-  const id = setInterval(frame, 20);
+  const id = setInterval(frame, 10);
 
    function frame(){
     if(percent >= 100){
@@ -85,8 +86,8 @@ elementP.innerHTML = percent + "%";
           </div>
           <div className="divider"></div>
           <div className="marquee marquee2">
-            <span>LOADING <img src={Gif5} alt="vision pro"/> LOADING <img src={Gif4} alt="vision pro"/> LOADING <img src={Gif3} alt="vision pro"/> LOADING <img src={Gif2} alt="vision pro"/> LOADING <img src={Gif5} alt="vision pro"/></span>
-            <span>LOADING <img src={Gif5} alt="vision pro"/> LOADING <img src={Gif4} alt="vision pro"/> LOADING <img src={Gif3} alt="vision pro"/> LOADING <img src={Gif2} alt="vision pro"/> LOADING <img src={Gif5} alt="vision pro"/></span>
+            <span>LOADING <img src={Gif5} alt="vision pro"/> LOADING <img src={Gif4} alt="vision pro"/> LOADING <img src={Gif6} alt="vision pro"/> LOADING <img src={Gif2} alt="vision pro"/> LOADING <img src={Gif4} alt="vision pro"/></span>
+            <span>LOADING <img src={Gif3} alt="vision pro"/> LOADING <img src={Gif4} alt="vision pro"/> LOADING <img src={Gif2} alt="vision pro"/> LOADING <img src={Gif2} alt="vision pro"/> LOADING <img src={Gif5} alt="vision pro"/></span>
           </div>
           <div className="divider"></div>
           <div id="percent">1%</div>
