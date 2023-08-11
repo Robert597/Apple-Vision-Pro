@@ -1,33 +1,33 @@
 //Import fonts
 @font-face {
-    font-family: Neue Montreal;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Regular.otf) format("opentype");
+    font-family: 'Neue Montreal';
+    src: url(../Assets/Fonts/neue/NeueMontreal-Regular.otf) format("opentype");
 }
 
 @font-face {
-    font-family: Neue Medium;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Medium.otf) format("opentype");
+    font-family: 'Neue Medium';
+    src: url(../Assets/Fonts/neue/NeueMontreal-Medium.otf) format("opentype");
 }
 
 @font-face {
-    font-family: Neue Bold;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Bold.otf) format("opentype");
+    font-family: 'Neue Bold';
+    src: url(../Assets/Fonts/neue/NeueMontreal-Bold.otf) format("opentype");
 }
 @font-face {
-    font-family: Sf Pro Display;
-    src: url(/vision-pro/public/Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf) format('truetype');
+    font-family: 'Sf Pro Display';
+    src: url(../Assets/Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf) format('truetype');
 }
 @font-face {
-    font-family: Sf Pro Medium;
-    src: url(/vision-pro/public/Fonts/SFPRODISPLAYMEDIUM.OTF);
+    font-family: 'Sf Pro Medium';
+    src: url(../Assets/Fonts/SFPRODISPLAYMEDIUM.OTF);
 }
 @font-face {
-    font-family: Sf Pro Regular;
-    src: url(/vision-pro/public/Fonts/SFPRODISPLAYREGULAR.OTF) format("opentype");
+    font-family: 'Sf Pro Regular';
+    src: url(../Assets/Fonts/SFPRODISPLAYREGULAR.OTF) format("opentype");
 }
 @font-face {
-    font-family: Monument Extended;
-    src: url(/vision-pro/public/Fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf) format("opentype");
+    font-family: 'Monument Extended';
+    src: url(../Assets/Fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf) format("opentype");
 };
 
 //Color variables
@@ -38,12 +38,12 @@ $complementary: #8D8C91;
 $little: #454547;
 
 //Font variables
-$heading-font: Sf Pro Display;
-$heading-medium: Sf Pro Medium;
-$text-font: Neue Montreal;
-$text-font-medium: Neue Medium;
-$text-font-bold: Neue Bold;
-$text-footer: Monument Extended;
+$heading-font: 'Sf Pro Display';
+$heading-medium: 'Sf Pro Medium';
+$text-font: 'Neue Montreal';
+$text-font-medium: 'Neue Medium';
+$text-font-bold: 'Neue Bold';
+$text-footer: 'Monument Extended';
 
 //Font Sizes
 $large: 260px;
