@@ -13,7 +13,7 @@ const Banner = () => {
     paused: true
   });
   useEffect(() => {
-    gsap.set("body", {overflow: "hidden"});
+    gsap.set("body", {overflowY: "hidden"});
     gsap.set(".banner-image-container", {
       y: "-75%",
       scale: 0.5
@@ -40,31 +40,27 @@ const Banner = () => {
     y: 0,
     duration: 1,
     ease: "slow (0.7, 0.7, false)"
-  })
+  }).set("body", {overflowY: "visible"})
   }, []);
 
   useEffect(() => {
  
    let percent = 1;
     let elementP = document.getElementById("percent");
-  const id = setInterval(frame, 10);
+  const id = setInterval(frame, 20);
 
    function frame(){
     if(percent >= 100){
       clearInterval(id);
       tl2.play();
-    }else if(percent < 40){
+    }else{
       percent++;
 elementP.style.left = `${percent}%`
 elementP.innerHTML = percent + "%";
-    } else {
-      percent++;
-elementP.style.left = `${percent -10}%`
-elementP.innerHTML = percent + "%";
-    }
+    } 
    }
 
-   return () => clearInterval(id);
+
   }, [])
   
   

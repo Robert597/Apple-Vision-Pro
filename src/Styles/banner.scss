@@ -91,12 +91,11 @@
     width: 100%;
     bottom: 15%;
     left: 0;
-    mix-blend-mode: difference;
 }
 .divider{
     width: 100%;
     height: 1px;
-    background-color: #fff;
+    background-color: $primary;
     margin: 0;
 }
 .marquee{
@@ -106,11 +105,13 @@
     white-space: nowrap;
     z-index: 3;
     padding: 15px 0;
+    color: $primary;
 }
 .marquee span{
-    font-family: $text-font;
-    font-weight: 400;
+    font-family: $heading-font;
+    font-weight: 600;
     font-size: 64px;
+    letter-spacing: -0.05em;
     display: inline-block;
     min-width: 100%;
     padding-left: -10%;
@@ -128,6 +129,7 @@
     font-size: 40px;
     color: $secondary;
     letter-spacing: -0.05em;
+    color: $primary;
 }
 .marquee1{
     animation: marquee1-animation 80s linear infinite;
