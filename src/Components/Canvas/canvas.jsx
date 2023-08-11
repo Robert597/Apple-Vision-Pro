@@ -1,6 +1,6 @@
 
 import  {Suspense, useEffect, useState} from 'react';
-import { Model } from "../../Assets/Textures/Scene";
+import { Model } from '../Model/Scene';
 import { Canvas} from "@react-three/fiber";
 
 

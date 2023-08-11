@@ -41,18 +41,16 @@ const Banner = () => {
     y: 0,
     duration: 1,
     ease: "slow (0.7, 0.7, false)"
-  }).set("body", {overflowY: "visible"})
-  }, []);
+  }).set("body", {overflowY: "visible"});
 
-  useEffect(() => {
- 
-   let percent = 1;
+  //
+  let percent = 1;
     let elementP = document.getElementById("percent");
-    let id;
+  
  
-window.onload = () => {
-   id = setInterval(frame, 10);
-}
+
+   let id = setInterval(frame, 10);
+
    function frame(){
     if(percent >= 100){
       clearInterval(id);
@@ -63,9 +61,9 @@ elementP.style.left = `${percent}%`
 elementP.innerHTML = percent + "%";
     } 
    }
+  }, []);
 
 
-  }, [])
   
   
   return (
