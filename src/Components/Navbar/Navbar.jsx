@@ -1,5 +1,5 @@
 
-import Logo from "../../Assets/vision pro 2/logo.png";
+import Logo from "/vision pro 2/logo.png";
 
 const Navbar = () => {
   return (

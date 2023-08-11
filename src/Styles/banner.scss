@@ -98,24 +98,7 @@
     background-color: $primary;
     margin: 0;
 }
-.marquee{
-    color: $secondary;
-    width: 100%;
-    margin: 0 auto;
-    white-space: nowrap;
-    z-index: 3;
-    padding: 15px 0;
-    color: $primary;
-}
-.marquee span{
-    font-family: $heading-font;
-    font-weight: 600;
-    font-size: 64px;
-    letter-spacing: -0.05em;
-    display: inline-block;
-    min-width: 100%;
-    padding-left: -10%;
-}
+
 .marquee span img{
     width: 60px;
     height: 60px;
@@ -131,25 +114,4 @@
     letter-spacing: -0.05em;
     color: $primary;
 }
-.marquee1{
-    animation: marquee1-animation 80s linear infinite;
-}
-.marquee2{
-    animation: marquee2-animation 80s linear infinite;
-}
-@keyframes marquee1-animation{
-    0%{
-        transform: translate(0, 0);
-    }
-    100%{
-        transform: translate(-100%, 0);
-    }
-}
-@keyframes marquee2-animation{
-    0%{
-        transform: translate(-100%, 0);
-    }
-    100%{
-        transform: translate(0, 0);
-    }
-}
+

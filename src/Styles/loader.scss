@@ -1,0 +1,82 @@
+@import "./variables.scss";
+.overlay-loader{
+    background-color: $primary;
+height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    .loader-container{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+
+        .percent{
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            transform: translate(0, -10%);
+            color: $complementary;
+            font-family: $text-font;
+            font-size: 64px;
+            font-weight: 600;
+            opacity: 0;
+        }
+        .little-info{
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            z-index: 20;
+            transform: translate(-5%, -50%);
+            color: $complementary;
+            transform-origin: 50% 50%;
+            transform: rotate(-90deg);
+            p{
+              font-size: 16px;
+              line-height: 20px;
+              height: 20px;
+              font-family: $text-font;
+              overflow: hidden;
+
+              span{
+                display: inline-block;
+                transform: translateY(100%);
+              }
+            }
+        }
+
+        .marquee{
+            width: 100%;
+            margin: 0 auto;
+            white-space: nowrap;
+            z-index: 3;
+            padding: 15px 0;
+            color: $primary;
+            position: fixed;
+            bottom: 5%;
+            font-size: 84px;
+            height: 90px;
+            overflow: hidden;
+            animation: marquee1-animation 80s linear infinite;
+        }
+        .marquee span{
+            font-family: $heading-font;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+            display: inline-block;
+            min-width: 100%;
+            transform: translateY(100%);
+            padding-left: -10%;
+            color: $complementary;
+        }
+
+        @keyframes marquee1-animation{
+            0%{
+                transform: translate(0, 0);
+            }
+            100%{
+                transform: translate(-100%, 0);
+            }
+        }
+    }
+}

@@ -1,14 +1,10 @@
 import { useEffect } from "react";
-import Vision from "../../Assets/vision pro 2/apple_vision_main2.png";
+import Vision from "/vision pro 2/apple_vision_main2.png";
 import "../../Styles/banner.scss";
 import {gsap} from 'gsap';
 import Navbar from "../Navbar/Navbar";
-import Gif1 from "../../Assets/vision pro 2/vision_white_left.jpg";
-import Gif2 from "../../Assets/vision pro 2/glass.jpg";
-import Gif3 from "../../Assets/vision pro 2/glass1.jpg";
-import Gif4 from "../../Assets/vision pro 2/vision_eye_tracking.jpg";
-import Gif5 from "../../Assets/vision pro 2/Apple.jpg";
-import Gif6 from "../../Assets/vision pro 2/dark_glass.jpg";
+
+import Loader from "../Loader/Loader";
 const Banner = () => {
   let tl2 = gsap.timeline({
     paused: true
@@ -16,12 +12,33 @@ const Banner = () => {
   useEffect(() => {
     gsap.set("body", {overflowY: "hidden"});
     gsap.set(".banner-image-container", {
-      y: "-75%",
-      scale: 0.5
+      y: "-50%",
+      scale: 0.8
      });
    
-  tl2.set(".Loading", {display: "none"})
-   tl2.to(".banner-image-container",{
+tl2.to(".percent", {
+  opacity: 0,
+  duration: .5,
+  ease: "power3.inOut"
+})
+.to(".little-info-text", {
+  y: "100%",
+  stagger: .3,
+  duration: .5,
+  ease: "slow (0.7, 0.7, false)"
+}, "<").set(".marquee", {
+  overflow: "hidden"
+}, "<").to(".marquee span", {
+  y: "100%",
+  stagger: .3,
+  duration: .5,
+  ease: "slow (0.7, 0.7, false)"
+}, "<").to(".overlay-loader", {
+  height: 0,
+  duration: 1,
+  ease: "power3.inOut"
+})
+   .to(".banner-image-container",{
     y: "-25%",
     scale: 1,
     ease: "back.out(1.7)",
@@ -43,7 +60,7 @@ const Banner = () => {
     ease: "slow (0.7, 0.7, false)"
   }).set("body", {overflowY: "visible"});
 
-  //
+  /*
   let percent = 1;
     let elementP = document.getElementById("percent");
   
@@ -61,6 +78,7 @@ elementP.style.left = `${percent}%`
 elementP.innerHTML = percent + "%";
     } 
    }
+   */
   }, []);
 
 
@@ -68,9 +86,11 @@ elementP.innerHTML = percent + "%";
   
   return (
     <div className="banner">
+      <Loader timeline={tl2}/>
     <div className="overlay"></div>
     <div className='bannerContainer'>
       <Navbar/>
+      
         <div className="banner-Title-Container">
             <h1 className="banner-title">
               <span className="inline-banner-title">VISION PRO</span>
@@ -79,6 +99,7 @@ elementP.innerHTML = percent + "%";
         <div className="banner-image-container">
             <img src={Vision} alt="vision pro graphics"/>
         </div>
+          {/*
         <div className="Loading">
           <div className="divider"></div>
           <div className="marquee marquee1">
@@ -93,7 +114,7 @@ elementP.innerHTML = percent + "%";
           <div className="divider"></div>
           <div id="percent">1%</div>
         </div>
-      {/*
+    
         <div className="banner-content">
           <h6 className="banner-content-title">Introducing</h6>
           <p className="banner-content-content">You&apos;ve never seen everything like this before.</p>
