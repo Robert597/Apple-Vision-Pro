@@ -48,8 +48,11 @@ const Banner = () => {
  
    let percent = 1;
     let elementP = document.getElementById("percent");
-  const id = setInterval(frame, 10);
-
+    let id;
+ 
+window.onload = () => {
+   id = setInterval(frame, 10);
+}
    function frame(){
     if(percent >= 100){
       clearInterval(id);
