@@ -1,21 +1,21 @@
 //Import fonts
 @font-face {
     font-family: Neue Montreal;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Regular.otf);
+    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Regular.otf) format("opentype");
 }
 
 @font-face {
     font-family: Neue Medium;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Medium.otf);
+    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Medium.otf) format("opentype");
 }
 
 @font-face {
     font-family: Neue Bold;
-    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Bold.otf);
+    src: url(/vision-pro/public/Fonts/neue/NeueMontreal-Bold.otf) format("opentype");
 }
 @font-face {
     font-family: Sf Pro Display;
-    src: url(/vision-pro/public/Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf);
+    src: url(/vision-pro/public/Fonts/FontsFree-Net-SFProDisplay-Semibold.ttf) format('truetype');
 }
 @font-face {
     font-family: Sf Pro Medium;
@@ -23,11 +23,11 @@
 }
 @font-face {
     font-family: Sf Pro Regular;
-    src: url(/vision-pro/public/Fonts/SFPRODISPLAYREGULAR.OTF);
+    src: url(/vision-pro/public/Fonts/SFPRODISPLAYREGULAR.OTF) format("opentype");
 }
 @font-face {
     font-family: Monument Extended;
-    src: url(/vision-pro/public/Fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf);
+    src: url(/vision-pro/public/Fonts/MonumentExtended-FreeForPersonalUse/MonumentExtended-Regular.otf) format("opentype");
 };
 
 //Color variables
