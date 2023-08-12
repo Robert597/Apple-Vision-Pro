@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+
+    @include breakpoint("md"){
+        padding: 0 20px;
+    }
     z-index: 10;
 transform: translateY(-100%);
     .NavbarLogo{
@@ -30,6 +34,10 @@ transform: translateY(-100%);
         display: flex;
         justify-content: space-between;
         color: #f5f5f5;
+
+        @include breakpoint("md"){
+           display: none;
+        }
 
         li{
             font-family: $text-font;
