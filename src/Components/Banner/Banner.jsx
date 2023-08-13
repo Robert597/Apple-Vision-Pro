@@ -10,12 +10,11 @@ const Banner = () => {
   let tl2 = gsap.timeline({
     paused: true
   });
-  let mm = gsap.matchMedia();
   useEffect(() => {
-    gsap.set("body", {overflowY: "hidden"});
+  //  gsap.set("body", {overflowY: "hidden"});
     gsap.set(".banner-image-container", {
-      y: "-50%",
-      scale: 0.8
+      y: (window.innerWidth <= 1000 ?"-20%" : "-50%"),
+      scale: (window.innerWidth <= 1000 ? 1.2 : 0.8)
      });
    
 tl2.to(".percent", {
@@ -39,55 +38,50 @@ tl2.to(".percent", {
   height: 0,
   duration: 1,
   ease: "power3.inOut"
-})
+}).to(".banner-image-container",{
+    y: (window.innerWidth <= 1000 ? "-5%" : "-25%"),
+    scale: (window.innerWidth <= 1000 ? 1.4 : 1),
+    ease: "back.out(1.7)",
+    duration: 2
+   }).to(".inline-banner-title", {
+    y: 0,
+    transform: "skewY(0deg)",
+    ease: "back.out(1.7)",
+    duration: 2
+  }, "<15%")
+.to(".overlay", {
+    minHeight: "100vh",
+    ease: "power3.inOut",
+    duration: 1
+  }).set(".banner-buttons", {
+    visibility: "visible"
+  }, "<30%").to(".banner-content-title span",  {
+    y: 0,
+    transform: "skewY(0deg)",
+    ease: "back.out(1.5)",
+    duration: 0.5
+  }, "<40%").to(".banner-content-up", {
+    y: 0,
+    transform: "skewY(0deg)",
+    ease: "back.out(1.5)",
+    duration: 0.5
+  },"<20%").to(".iconContainer", {
+    right: 0,
+    rotate: 0,
+    duration: 2,
+    ease: "back.out(0.8)"
+  }).to(" .banner-button-text", {
+    opacity: 1,
+    duration: .5
+  }, "<15%")
+  .to(".NavbarContainer", {
+    y: 0,
+    duration: 1,
+    ease: "slow (0.7, 0.7, false)"
+  }).set("body", {overflowY: "visible"});
   
 
-mm.add("(max-width: 1000px)", () => {
-  tl2.to(".banner-image-container",{
-    y: "-5%",
-    scale: 1.4,
-    ease: "back.out(1.7)",
-    duration: 2
-   }).to(".inline-banner-title", {
-    y: 0,
-    transform: "skewY(0deg)",
-    ease: "back.out(1.7)",
-    duration: 2
-  }, "<15%")
-  .to(".overlay", {
-    minHeight: "100vh",
-    ease: "power3.inOut",
-    duration: 1
-  })
-  .to(".NavbarContainer", {
-    y: 0,
-    duration: 1,
-    ease: "slow (0.7, 0.7, false)"
-  }).set("body", {overflowY: "visible"});
-})
-mm.add("(min-width: 1001px)", () => {
-  tl2.to(".banner-image-container",{
-    y: "-25%",
-    scale: 1,
-    ease: "back.out(1.7)",
-    duration: 2
-   }).to(".inline-banner-title", {
-    y: 0,
-    transform: "skewY(0deg)",
-    ease: "back.out(1.7)",
-    duration: 2
-  }, "<15%")
-  .to(".overlay", {
-    minHeight: "100vh",
-    ease: "power3.inOut",
-    duration: 1
-  })
-  .to(".NavbarContainer", {
-    y: 0,
-    duration: 1,
-    ease: "slow (0.7, 0.7, false)"
-  }).set("body", {overflowY: "visible"});
-})
+
   }, []);
 
 
@@ -112,15 +106,16 @@ mm.add("(min-width: 1001px)", () => {
         
     
         <div className="banner-content">
-          <h6 className="banner-content-title">Introducing</h6>
-          <p className="banner-content-content">You&apos;ve never seen everything like this before.</p>
+          <h6 className="banner-content-title"><span>Introducing</span></h6>
+          <p className="banner-content-content"><span className="banner-content-up">You&apos;ve never seen everything like this before.</span></p>
         </div>
         <div className="banner-buttons">
           <button className="banner-button">
-            Learn about design <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
+            <span className="banner-button-text">Learn about design </span>
+            <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
           </button>
           <button className="banner-button">
-            Learn about technology <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
+          <span className="banner-button-text">Learn about technology </span> <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
           </button>
         </div>
   

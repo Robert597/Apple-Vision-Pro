@@ -1,6 +1,6 @@
 @import "./variables.scss";
 .banner{
-    position: relative;
+    position: relative; 
     height: 100vh;
 }
 .overlay{
@@ -24,6 +24,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 20px;
     }
 }
 .banner-title{
@@ -108,42 +109,65 @@
 .banner-content-title{
     font-family: $text-font-medium;
     font-size: 26px;
+    line-height: 36px;
+    height: 36px;
     color: $little;
     text-align: center;
+    overflow: hidden;
+
+    span{
+        transform: translateY(200%)  skewY(15deg);
+        display: inline-block;
+       
+    }
 
     @include breakpoint("xssm"){
         font-size: 18px;
+        line-height: 28px;
+        height: 38px;
      }
 }
 
 .banner-content-content{
     font-family: $heading-font;
     font-size: 32px;
+    height: 50px;
+    line-height: 50px;
     color: $secondary;
     text-align: center;
-    padding: 20px 0;
+    overflow: hidden;
+    
+
+    .banner-content-up{
+        transform: translateY(200%) skewY(10deg);
+        display: inline-block;
+    }
 
     @include breakpoint("sm"){
         font-size: 24px;
+        height: 34px;
+    line-height: 34px;
      }
     @include breakpoint("xssm"){
         font-size: 18px;
+        height: 28px;
+    line-height: 28px;
      }
 }
 .banner-buttons{
-    justify-content: center;
-    width: 100%;
-    align-items: center;
     z-index: 10;
-
+    margin-top: 20px;
     display: none;
 
  @include breakpoint("lg"){
     display: flex;
+    visibility: hidden;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
  }
  @include breakpoint("xxsm"){
     flex-direction: column;
-    margin-top: 20px;
  }
 }
 .banner-button{
@@ -157,9 +181,13 @@
     font-size: 16px;
     margin-right: 20px;
     display: flex;
-    padding: 10px 20px;
+    padding: 15px 20px;
     align-items: center;
     position: relative;
+
+    .banner-button-text{
+        opacity: 0;
+    }
 
     @include breakpoint("xxsm"){
         width: 100%;
@@ -168,7 +196,8 @@
 }
 .iconContainer{
     position: absolute;
-    right: 0;
+    right: 90%;
+    transform: rotate(90deg);
     top: 0;
     height: 60px;
     width: 60px;

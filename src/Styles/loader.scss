@@ -21,6 +21,10 @@ height: 100vh;
             font-size: 64px;
             font-weight: 600;
             opacity: 0;
+
+            @include breakpoint("md-l"){
+                font-size: 44px;
+            }
         }
         .little-info{
             position: absolute;
@@ -31,13 +35,18 @@ height: 100vh;
             color: $complementary;
             transform-origin: 50% 50%;
             transform: rotate(-90deg);
+            @include breakpoint("md-l"){
+                left: 0;
+            }
             p{
               font-size: 16px;
               line-height: 20px;
               height: 20px;
               font-family: $text-font;
               overflow: hidden;
-
+              @include breakpoint("xsm"){
+                font-size: 14px;
+            }
               span{
                 display: inline-block;
                 transform: translateY(100%);
@@ -57,7 +66,11 @@ height: 100vh;
             font-size: 84px;
             height: 90px;
             overflow: hidden;
-            animation: marquee1-animation 80s linear infinite;
+            animation: marquee1-animation 20s linear infinite;
+            @include breakpoint("md-l"){
+                font-size: 64px;
+                height: 70px;
+            }
         }
         .marquee span{
             font-family: $heading-font;
