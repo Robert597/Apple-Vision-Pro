@@ -39,33 +39,29 @@ tl2.to(".percent", {
   duration: 1,
   ease: "power3.inOut"
 }).to(".banner-image-container",{
-    y: (window.innerWidth <= 1000 ? "-5%" : "-25%"),
+    y: (window.innerWidth <= 1000 ? "-15%" : "-25%"),
     scale: (window.innerWidth <= 1000 ? 1.4 : 1),
-    ease: "back.out(1.7)",
+    ease: "back.out(2)",
     duration: 2
    }).to(".inline-banner-title", {
     y: 0,
     transform: "skewY(0deg)",
     ease: "back.out(1.7)",
     duration: 2
-  }, "<15%")
+  }, "<5%")
 .to(".overlay", {
     minHeight: "100vh",
     ease: "power3.inOut",
     duration: 1
   }).set(".banner-buttons", {
     visibility: "visible"
-  }, "<30%").to(".banner-content-title span",  {
+  }, "<60%").to([".banner-content-title span", ".banner-content-up"],  {
     y: 0,
     transform: "skewY(0deg)",
     ease: "back.out(1.5)",
-    duration: 0.5
-  }, "<40%").to(".banner-content-up", {
-    y: 0,
-    transform: "skewY(0deg)",
-    ease: "back.out(1.5)",
-    duration: 0.5
-  },"<20%").to(".iconContainer", {
+    duration: 1,
+    stagger: .3
+  }, "<40%").to(".iconContainer", {
     right: 0,
     rotate: 0,
     duration: 2,
