@@ -9,7 +9,6 @@ const Navbar = () => {
         </div>
         <ul className="Navbar-Link-Content">
             <li><a href="#" data-replace="Home">Home</a></li>
-            <li><a href="#" data-replace="Vision Pro">Vision Pro</a></li>
             <li><a href="#" data-replace="Design">Design</a></li>
             <li><a href="#" data-replace="Technology">Technology</a></li>
             <li><a href="#" data-replace="Security">Security</a></li>

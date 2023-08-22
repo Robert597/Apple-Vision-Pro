@@ -1,95 +1,137 @@
-@import "./variables.scss";
-.overlay-loader{
-    background-color: $primary;
-height: 100vh;
-    position: absolute;
-    bottom: 0;
+.overlay-svg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
     left: 0;
+    bottom: 0;
+    z-index: 40;
+    background: $tertiary;
+    }
+    svg{
+      width: 100vw;
+      height: 110vh;
+    }
+    svg path{
+      fill: $tertiary;
+    }
+    .overlay-text{
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      width: 100%;
+     padding: 0 40px;
+     overflow: hidden;
+     @include breakpoint("md"){
+        padding: 0 20px;
+        bottom: 10%;
+    }
+    }
+    .overlay-text h1{
+      color: $primary;
+      font-size: 250px;
+      line-height: 280px;
+      height: 280px;
+     text-transform: uppercase;
+     font-family: $heading-font;
+     letter-spacing: -0.05em;
+     white-space: nowrap;
+     overflow: hidden;
 
-    .loader-container{
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+     @include breakpoint("xlg"){
+        font-size: 200px;
+        line-height: 220px;
+        height: 220px;
+    }
+    @include breakpoint("md-lg"){
+        font-size: 160px;
+        line-height: 180px;
+        height: 180px;
+    }
+    @include breakpoint("md"){
+        font-size: 140px;
+        line-height: 160px;
+        height: 160px;
+    }
+    @include breakpoint("sm"){
+        font-size: 120px;
+        line-height: 140px;
+        height: 140px;
+    }
+    @include breakpoint("xxsm"){
+        font-size: 100px;
+        line-height: 120px;
+        height: 120px;
+    }
+    @include breakpoint("xssm"){
+        font-size: 80px;
+        line-height: 100px;
+        height: 100px;
+    }
+    @include breakpoint("xss"){
+        font-size: 70px;
+        line-height: 90px;
+        height: 90px;
+    }
+    @include breakpoint("xs"){
+        font-size: 60px;
+        line-height: 80px;
+        height: 80px;
+    }
+    }
+    .overlay-text h1 span, .overlay-info h1 span{
+      display: inline-block;transform: translateY(150%) skewY(10deg);
+    }
+    #counter{
+        display: inline-block;
+        width: 80%;
+        opacity: 0;
 
-        .percent{
-            position: absolute;
-            top: 10%;
-            right: 10%;
-            transform: translate(0, -10%);
-            color: $complementary;
-            font-family: $text-font;
-            font-size: 64px;
-            font-weight: 600;
-            opacity: 0;
-
-            @include breakpoint("md-l"){
-                font-size: 44px;
-            }
-        }
-        .little-info{
-            position: absolute;
-            top: 50%;
-            left: 5%;
-            z-index: 20;
-            transform: translate(-5%, -50%);
-            color: $complementary;
-            transform-origin: 50% 50%;
-            transform: rotate(-90deg);
-            @include breakpoint("md-l"){
-                left: 0;
-            }
-            p{
-              font-size: 16px;
-              line-height: 20px;
-              height: 20px;
-              font-family: $text-font;
-              overflow: hidden;
-              @include breakpoint("xsm"){
-                font-size: 14px;
-            }
-              span{
-                display: inline-block;
-                transform: translateY(100%);
-              }
-            }
-        }
-
-        .marquee{
-            width: 100%;
-            margin: 0 auto;
-            white-space: nowrap;
-            z-index: 3;
-            padding: 15px 0;
-            color: $primary;
-            position: fixed;
-            bottom: 5%;
-            font-size: 84px;
-            height: 90px;
-            overflow: hidden;
-            animation: marquee1-animation 20s linear infinite;
-            @include breakpoint("md-l"){
-                font-size: 64px;
-                height: 70px;
-            }
-        }
-        .marquee span{
-            font-family: $heading-font;
-            font-weight: 600;
-            letter-spacing: -0.05em;
-            display: inline-block;
-            min-width: 100%;
-            transform: translateY(100%);
-            padding-left: -10%;
-            color: $complementary;
-        }
-
-        @keyframes marquee1-animation{
-            0%{
-                transform: translate(0, 0);
-            }
-            100%{
-                transform: translate(-100%, 0);
-            }
+        
+    }
+    .overlay-bottom{
+        position: absolute;
+        bottom: 5%;
+        padding: 0 40px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include breakpoint("md"){
+            position: static;
+            padding: 0 20px;
+            display: block;
         }
     }
-}
+    .overlay-info{
+        width: 50%;
+        @include breakpoint("md"){
+            position: absolute;
+            bottom: 5%;
+          width: 100%;
+        }
+    }
+    #percent1{
+        width: 50%;
+        @include breakpoint("md"){
+            position: absolute;
+            bottom: 25%;
+            width: 100%;
+        }
+    }
+    .overlay-info h1, #percent1{
+        color: $primary;
+        font-size: 28px;
+        line-height: 50px;
+        height: 50px;
+       text-transform: uppercase;
+       font-weight: 100;
+       font-family: $heading-font;
+       overflow: hidden;
+
+       @include breakpoint("xsmm"){
+        font-size: 20px;
+        line-height: 35px;
+        height: 35px;
+       }
+    }

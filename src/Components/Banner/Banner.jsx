@@ -6,39 +6,50 @@ import { FiArrowUpRight} from "react-icons/fi";
 import Navbar from "../Navbar/Navbar";
 
 import Loader from "../Loader/Loader";
+import MobileNav from "../Navbar/Mobile-Nav";
 const Banner = () => {
   let tl2 = gsap.timeline({
     paused: true
   });
+  const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
+  const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
   useEffect(() => {
   //  gsap.set("body", {overflowY: "hidden"});
+  
     gsap.set(".banner-image-container", {
       y: (window.innerWidth <= 1000 ?"-20%" : "-50%"),
       scale: (window.innerWidth <= 1000 ? 1.2 : 0.8)
      });
    
-tl2.to(".percent", {
+tl2.to([".overlay-text h1 span", ".overlay-info h1 span"], {
+  y: "-150%",
+  duration: 1.5,
+  stagger: 0.1,
+  ease: "power2.inOut"
+}).to("#counter", {
   opacity: 0,
-  duration: .5,
-  ease: "power3.inOut"
+  ease: "power2.inOut",
+  duration: 1
+}, "<").set(".overlay-svg", {
+  backgroundColor: "transparent"
 })
-.to(".little-info-text", {
-  y: "100%",
-  stagger: .3,
-  duration: .5,
-  ease: "slow (0.7, 0.7, false)"
-}, "<").set(".marquee", {
-  overflow: "hidden"
-}, "<").to(".marquee span", {
-  y: "100%",
-  stagger: .3,
-  duration: .5,
-  ease: "slow (0.7, 0.7, false)"
-}, "<").to(".overlay-loader", {
-  height: 0,
-  duration: 1,
-  ease: "power3.inOut"
-}).to(".banner-image-container",{
+.to("#svg", {
+  duration: 0.9,
+  attr: {
+    d: curve
+  },
+  ease: "Power2.easeIn"
+}).to("#svg", {
+  duration: 0.9,
+  attr: {
+    d: flat
+  },
+  ease: "Power2.easeIn"
+}).to(".overlay-svg", {
+  zIndex: -1,
+  display: "none"
+})
+.to(".banner-image-container",{
     y: (window.innerWidth <= 1000 ? "-15%" : "-25%"),
     scale: (window.innerWidth <= 1000 ? 1.4 : 1),
     ease: "back.out(2)",
@@ -49,22 +60,18 @@ tl2.to(".percent", {
     ease: "back.out(1.7)",
     duration: 2
   }, "<5%")
-.to(".overlay", {
-    minHeight: "100vh",
-    ease: "power3.inOut",
-    duration: 1
-  }).set(".banner-buttons", {
+.set(".banner-buttons", {
     visibility: "visible"
   }, "<60%").to([".banner-content-title span", ".banner-content-up"],  {
     y: 0,
     transform: "skewY(0deg)",
     ease: "back.out(1.5)",
-    duration: 1,
+    duration: (window.innerWidth <= 1000 ? 1 : 0),
     stagger: .3
   }, "<40%").to(".iconContainer", {
     right: 0,
     rotate: 0,
-    duration: 2,
+    duration: (window.innerWidth <= 1000 ? 2 : 0),
     ease: "back.out(0.8)"
   }).to(" .banner-button-text", {
     opacity: 1,
@@ -85,11 +92,9 @@ tl2.to(".percent", {
   
   return (
     <div className="banner">
-      <Loader timeline={tl2}/>
-    <div className="overlay"></div>
+  <Loader timeline={tl2}/>
     <div className='bannerContainer'>
       <Navbar/>
-      
         <div className="banner-Title-Container">
             <h1 className="banner-title">
               <span className="inline-banner-title">VISION PRO</span>

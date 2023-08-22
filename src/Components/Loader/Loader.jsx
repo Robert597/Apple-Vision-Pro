@@ -2,11 +2,14 @@ import {gsap} from 'gsap';
 import { useEffect } from 'react';
 const Loader = ({timeline}) => {
    
-    let load = gsap.timeline({
-delay: .5});
+    
     useEffect(() => {
-        let percent = 1;
-        const elementP = document.getElementById("percent1");
+        const load = gsap.timeline({
+            onComplete: move
+        });
+        let percent = 0;
+        const elementP = document.getElementById("counter");
+       
         let id;
         function move(){
             id = setInterval(frame, 10)
@@ -18,30 +21,40 @@ delay: .5});
             }else{
               percent++;
         elementP.textContent = `${percent}%`;
+        elementP.style.transform = `translate(${percent}%)`;
             } 
            }
-     load.to(".percent", {
+     load.to([".overlay-text h1 span", ".overlay-info h1 span"], {
+        y: 0,
+       transform: "skewY(0deg)",
+        duration: 1.5,
+        stagger: 0.1,
+        ease: "power2.inOut"
+     }).to("#counter", {
         opacity: 1,
-        duration: 1,
-        ease: "power3.inOut"
+        ease: "power2.inOut",
+        duration: 1
      })
-     .to(".little-info-text", {
-        y: 0,
-        stagger: .3,
-        duration: .5,
-        ease: "slow (0.7, 0.7, false)"
-     }, "<").set(".marquee", {
-        overflow: "visible"
-     }).to(".marquee span", {
-        y: 0,
-        stagger: .3,
-        duration: 1,
-        ease: "slow (0.7, 0.7, false)"
-     }, "<50%")
-    setTimeout(move, 2000);
-    }, [])
+    
+    }, []);
     
     return (
+        <div className="overlay-svg">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+          <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div className="overlay-text">
+          <h1> <span>Vision Pro</span></h1>
+        </div>
+        <div className="overlay-bottom">
+        <div className='overlay-info'>
+        <h1> <span>Apple's first 3D camera.</span></h1>
+        </div>
+        <div id="percent1">
+            <span id='counter'>0</span>
+        </div>
+        </div>
+        {/*
         <div className="overlay-loader">
             <div className="loader-container">
                 <div className="percent" id="percent1">
@@ -63,6 +76,9 @@ delay: .5});
                 </div>
             </div>
         </div>
-    )
+        
+    */}
+       </div>
+)
 }
 export default Loader;
