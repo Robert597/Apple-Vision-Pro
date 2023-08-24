@@ -45,10 +45,9 @@ const MobileNav = () => {
                 ease: power4
             }, "<");
         
-        tl.set(".nav-svg", 1, {
+        tl.set(".nav-svg", {
             visibility: "visible"
-        }, "-=1")
-        .set(".menu", 1, {
+        }, "-=1").set(".menu", {
             visibility: "visible"
         }, "-=1")
         .to("#svg1", {
