@@ -92,8 +92,8 @@ tl2.to([".overlay-text h1 span", ".overlay-info h1 span"], {
   return (
     <div className="banner">
   <Loader timeline={tl2}/>
+  <Navbar/>
     <div className='bannerContainer'>
- <Navbar/>
         <div className="banner-Title-Container">
             <h1 className="banner-title">
               <span className="inline-banner-title">VISION PRO</span>
