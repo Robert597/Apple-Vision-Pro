@@ -4,13 +4,14 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
     backdrop-filter: blur(10px);
     mix-blend-mode: difference;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+    box-sizing: border-box;
 
     @include breakpoint("md"){
         padding: 0 20px;
@@ -100,6 +101,10 @@ position: relative;
 color: #F5F5F5;
 overflow: hidden;
 transition: .1s color ease-in-out;
+
+@include breakpoint("md"){
+    display: none;
+ }
 
 &:hover{
     color: $complementary

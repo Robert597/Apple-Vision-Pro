@@ -6,7 +6,6 @@ import { FiArrowUpRight} from "react-icons/fi";
 import Navbar from "../Navbar/Navbar";
 
 import Loader from "../Loader/Loader";
-import MobileNav from "../Navbar/Mobile-Nav";
 const Banner = () => {
   let tl2 = gsap.timeline({
     paused: true

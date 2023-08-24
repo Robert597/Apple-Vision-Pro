@@ -1,10 +1,16 @@
 @import "./variables.scss";
 .mobile-nav-container{
+    display: none;
+    @include breakpoint("md"){
+        display: block;
+    }
     #hamburger{
         position: absolute;
         width: 20px;
         height: 20px;
         z-index: 250;
+        mix-blend-mode: difference;
+    
     }
     
     #hamburger span{
