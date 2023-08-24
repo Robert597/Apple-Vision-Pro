@@ -3,7 +3,7 @@ import Vision from "/vision pro 2/apple_vision_main2.png";
 import "../../Styles/banner.scss";
 import {gsap} from 'gsap';
 import { FiArrowUpRight} from "react-icons/fi";
-import Navbar from "../Navbar/Navbar";
+
 
 import Loader from "../Loader/Loader";
 const Banner = () => {
@@ -92,7 +92,6 @@ tl2.to([".overlay-text h1 span", ".overlay-info h1 span"], {
   return (
     <div className="banner">
   <Loader timeline={tl2}/>
-  <Navbar/>
     <div className='bannerContainer'>
         <div className="banner-Title-Container">
             <h1 className="banner-title">

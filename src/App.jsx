@@ -3,6 +3,7 @@ import Detail from "./Components/Details/detail";
 import {gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "./Components/Banner/Banner";
+import Navbar from "./Components/Navbar/Navbar";
 import { useEffect } from "react";
  
 function App() {
@@ -19,6 +20,7 @@ function App() {
    <div className="container">
 <Banner/>
     <Detail/>
+    <Navbar/>
 </div>
   )
 }
