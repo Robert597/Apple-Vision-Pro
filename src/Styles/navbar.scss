@@ -1,4 +1,10 @@
 @import "./variables.scss";
+.navv{
+    display: block;
+    position: relative;
+    z-index: 1000;
+    height: 100%;
+}
 .NavbarContainer{
     height: 4rem;
     position: fixed;
