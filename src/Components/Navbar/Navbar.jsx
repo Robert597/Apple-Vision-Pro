@@ -3,6 +3,7 @@ import MobileNav from "./Mobile-Nav";
 import Logo from "/vision pro 2/logo.png";
 
 const Navbar = () => {
+
   return (
     <div className='NavbarContainer'>
         <div className="NavbarLogo">
