@@ -3,6 +3,7 @@
     display: none;
     position: relative;
     width: 60px;
+    z-index: 1000;
 
     @include breakpoint("md"){
         display: block;
