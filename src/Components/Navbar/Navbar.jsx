@@ -24,24 +24,7 @@ const Navbar = () => {
         const power2 = "power2.inOut";
         const power4 = "power4.inOut";
     
-        tl.to("#hamburger", 1.25, {
-            marginTop: "-10px",
-            x: -10,
-            y: 10,
-            ease: power4
-        });
-    
-        tl.to("#hamburger span", 1, {
-            background: "#e2e2dc",
-            ease: power2
-        }, "<");
-        tl.to(spanBefore, 1, {
-            background: "#e2e2dc",
-            ease: power2
-        }, "<");
-     
-    
-    tl.set(".nav-svg", {
+      tl.set(".nav-svg", {
         display: "block"
     }, "-=1").set(".menu", {
         display: "block" 
