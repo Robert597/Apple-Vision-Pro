@@ -2,8 +2,9 @@
 .navv{
     display: block;
     position: relative;
-    z-index: 1000;
+    z-index: 3000;
     height: 100%;
+
 }
 .NavbarContainer{
     height: 4rem;
@@ -13,7 +14,6 @@
     top: 0;
     max-width: 100vw;
     backdrop-filter: blur(10px);
-    mix-blend-mode: difference;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,9 @@ transform: translateY(-100%);
         width: 60px;
         height: 100%;
        cursor: pointer;
+       position: relative;
         display: none;
+        mix-blend-mode: difference;
     @include breakpoint("md"){
         display: block;
     }

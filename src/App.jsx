@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Navbar/Navbar";
 import { useEffect } from "react";
+import About from "./Components/About/About";
  
 function App() {
   const start1 = "M 0 100 V 50 Q 50 0 100 50 V 100 z"
@@ -21,6 +22,7 @@ function App() {
      <Navbar/>
 <Banner/>
     <Detail/>
+    <About/>
 </div>
   )
 }
