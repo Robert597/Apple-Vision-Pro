@@ -14,7 +14,7 @@ const About = () => {
     <div className='AboutContainer'>
         <div className='aboutVideoContainer'>
             <div className="about-video-lg">
-                <video  src={Video3} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+                <video  src={Video3} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                    <p>Welcome to the Era of Spatial Computing</p> 
@@ -22,7 +22,7 @@ const About = () => {
             </div>
             <div className='about-video-md'>
             <div className="about-video-sm">
-            <video  src={Video2} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video2} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                 <p>You navigate simply by using your hands, voices and eyes.</p>
@@ -30,7 +30,7 @@ const About = () => {
             </div>
 
             <div className="about-video-sm">
-            <video  src={Video5} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video5} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                 <p>so you can do the things you love in ways never possible.</p>
@@ -41,7 +41,7 @@ const About = () => {
 
         <div className='aboutVideoContainer aboutVideoContainer2'>
             <div className="about-video-lg">
-            <video  src={Video7} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video7} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                     <p>Get on the same page in the same space.</p>
@@ -49,7 +49,7 @@ const About = () => {
             </div>
             <div className='about-video-md'>
             <div className="about-video-sm">
-            <video  src={Video8} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video8} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                     <p>Apple's First Spatial Operating System.</p>
@@ -57,7 +57,7 @@ const About = () => {
             </div>
 
             <div className="about-video-sm">
-            <video  src={Video6} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video6} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                     <p>Be in the moment all over again.</p>
@@ -68,7 +68,7 @@ const About = () => {
 
         <div className='aboutVideoContainer'>
             <div className="about-video-lg">
-            <video  src={Video4} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video4} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                     <p>Free your desktop and your apps will follow.</p>
@@ -76,7 +76,7 @@ const About = () => {
             </div>
             <div className='about-video-md'>
             <div className="about-video-sm">
-            <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
                     <p>An advanced Spatial Audio system is core to the Apple Vision Pro experience, creating the feeling that sounds are coming from the environment around the user and matching the sound to the space. </p>
@@ -84,7 +84,7 @@ const About = () => {
             </div>
 
             <div className="about-video-sm">
-            <video  src={Video1} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop>
+            <video  src={Video1} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
 <p>Apple Vision Pro seamlessly blends digital content with your physical space.</p>
@@ -96,4 +96,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
