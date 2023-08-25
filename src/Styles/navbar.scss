@@ -36,6 +36,48 @@ transform: translateY(-100%);
         }
     }
 
+    #mobile-btn{
+        width: 60px;
+        height: 100%;
+       cursor: pointer;
+        display: none;
+    @include breakpoint("md"){
+        display: block;
+    }
+    }
+    
+    #mobile-btn span{
+       width: 24px;
+       height: 1.5px;
+       display: inline-block;
+       position: absolute;
+       top: 50%;
+       transform: translateY(-50%);
+       background: $secondary;
+       transition: transform 0.25s;
+    }
+    
+    #mobile-btn span::before{
+        content: "";
+        width: 18px;
+        height: 1.5px;
+        display: inline-block;
+        background: $secondary;
+        position: absolute;
+        right: 0;
+        transform: translateY(-5px);
+        transition: transform 0.25s;
+    }
+    
+    #mobile-btn.active span{
+        transform: rotate(45deg);
+    }
+    #mobile-btn.active span::before{
+        top: unset;
+        width: 24px;
+        transform: rotate(-90deg);
+    }
+
     .Navbar-Link-Content{
         width: 50%;
         list-style: none;

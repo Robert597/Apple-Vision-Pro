@@ -1,57 +1,12 @@
 @import "./variables.scss";
 .mobile-nav-container{
     display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 1000;
+
 
     @include breakpoint("md"){
         display: block;
     }
-    #hamburger{
-        position: absolute;
-        width: 60px;
-        height: 20px;
-        z-index: 2500;
-        mix-blend-mode: difference;
-    
-    }
-    
-    #hamburger span{
-       width: 24px;
-       height: 1.5px;
-       display: inline-block;
-       position: absolute;
-       top: 50%;
-       transform: translateY(-50%);
-       background: $secondary;
-       transition: transform 0.25s;
-    }
-    
-    #hamburger span::before{
-        content: "";
-        width: 18px;
-        height: 1.5px;
-        display: inline-block;
-        background: $secondary;
-        position: absolute;
-        right: 0;
-        transform: translateY(-5px);
-        transition: transform 0.25s;
-    }
-    
-    #hamburger.active span{
-        transform: rotate(45deg);
-    }
-    #hamburger.active span::before{
-        top: unset;
-        width: 24px;
-        transform: rotate(-90deg);
-    }
+   
 .nav-svg{
     width: 100vw;
     height: 100vh;
@@ -60,7 +15,6 @@
     left: 0;
     bottom: 0;
     z-index: 3000;
-    background-color: yellow;
 }
 #svg1{
     fill: $tertiary;
@@ -72,7 +26,7 @@
         width: 100vw;
         height: 100vh;
         background-color: $primary;
-        z-index: 2000;
+
 
         .primary-menu{
             width: 100%;
