@@ -27,6 +27,7 @@ gap: 30px;
 display: flex;
 flex-direction: column;
 justify-content: center;
+overflow: hidden;
  @include breakpoint("md-lg"){
         width: 100%;
         height: 500px;
@@ -42,6 +43,9 @@ justify-content: center;
     display: block;
     text-transform: capitalize;
     text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s 1s;
 
      @include breakpoint("xssm"){
         font-size: 14px;
@@ -51,17 +55,37 @@ justify-content: center;
         font-size: 12px;
     }
 }
+.about-video-content.text-active{
+    opacity: 1;
+    transform: translateY(0);
+}
     video{
         width: 100%;
        height: 80vh;
         object-fit: cover;
         border-radius: 30px;
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(60%);
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+      
 
          @include breakpoint("md-lg"){
         width: 100%;
         height: 90%;
         border-radius: 0;
     }
+    }
+ 
+}
+.about-active{
+    video{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .about-video-content{
+        opacity: 1;
+        transform: translateY(0);
     }
 }
     .about-video-md{
@@ -79,6 +103,7 @@ justify-content: center;
             width: 100%;
         height: 50vh;
         padding: 40px 20px;
+        overflow: hidden;
 
             video{
                 min-width: 100%;
@@ -86,7 +111,11 @@ justify-content: center;
                 object-fit: cover;
                  border-radius: 10px;
                  padding: 0;
+                 transform: translateY(60%);
+                 opacity: 0;
+                 transition: transform 1s ease-in-out, opacity 1s ease-in-out;
             }
+          
 
             .about-video-content{
     color: $secondary;
@@ -96,6 +125,8 @@ justify-content: center;
     padding: 15px 0;
     text-transform: capitalize;
     text-align: center;
+    transform: translateY(100%);
+    transition: all 1s 1s;
 
         @include breakpoint("xssm"){
         font-size: 14px;
@@ -107,6 +138,7 @@ justify-content: center;
 }
 
 
+
     @include breakpoint("md-lg"){
         width: 100%;
         height: 500px;
@@ -116,6 +148,16 @@ justify-content: center;
     @include breakpoint("xssm"){
         height: 400px;
     }
+        }
+        .about-active{
+            video{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            .about-video-content{
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     }
 

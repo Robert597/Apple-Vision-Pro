@@ -37,9 +37,6 @@ export function Model(props) {
        toggleActions: 'play none none reverse',
        scrub: 1,
        ease: "power3.inOut"
-     },
-     onComplete: () => {
-      console.log(camera)
      }
     });
 
