@@ -79,7 +79,7 @@ const About = () => {
             <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'>
                 </video>
                 <div className='about-video-content'>
-                    <p>An advanced Spatial Audio system is core to the Apple Vision Pro experience, creating the feeling that sounds are coming from the environment around the user and matching the sound to the space. </p>
+                    <p>An advanced Spatial Audio system is core to the Apple Vision Pro experience, creating the feeling that sounds are coming from the environment around the user.</p>
                 </div>
             </div>
 
