@@ -21,7 +21,8 @@ const About = () => {
             trigger: video,
             toggleClass: 'about-active',
             start: 'top center',
-            end: 'bottom top'
+            end: 'bottom top',
+            markers: true
         })
        });
        videos1.forEach((video) => {
