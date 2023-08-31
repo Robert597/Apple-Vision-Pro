@@ -13,24 +13,29 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const About = () => {
     useEffect(() => {
+    let pinAmount = document.querySelector(".Detail");
+    console.log(pinAmount);
        const videos = gsap.utils.toArray('.about-video-lg');
        const videos1 = gsap.utils.toArray('.about-video-sm');
-       const texts = gsap.utils.toArray(".about-video-content");
+    
        videos.forEach((video) => {
         ScrollTrigger.create({
             trigger: video,
             toggleClass: 'about-active',
-            start: 'top center',
-            end: 'bottom top',
+            start: 'top top-=' + (pinAmount.offsetHeight) ,
+            end: 'bottom top-=' + (pinAmount.offsetHeight) ,
             markers: true
+           
         })
        });
        videos1.forEach((video) => {
         ScrollTrigger.create({
             trigger: video,
             toggleClass: 'about-active',
-            start: 'top center',
-            end: 'bottom top'
+            start: 'top center-=' + (pinAmount.offsetHeight),
+            end: 'bottom top-=' + (pinAmount.offsetHeight),
+            markers: true
+
         })
        });
        

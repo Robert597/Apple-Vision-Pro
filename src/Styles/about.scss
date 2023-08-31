@@ -44,7 +44,7 @@ overflow: hidden;
     text-transform: capitalize;
     text-align: center;
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(150%);
     transition: all 1s 1s;
 
      @include breakpoint("xssm"){
@@ -104,6 +104,7 @@ overflow: hidden;
         height: 50vh;
         padding: 40px 20px;
         overflow: hidden;
+         
 
             video{
                 min-width: 100%;
@@ -125,7 +126,7 @@ overflow: hidden;
     padding: 15px 0;
     text-transform: capitalize;
     text-align: center;
-    transform: translateY(100%);
+    transform: translateY(150%);
     transition: all 1s 1s;
 
         @include breakpoint("xssm"){

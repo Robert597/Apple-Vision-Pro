@@ -6,6 +6,7 @@ Command: npx gltfjsx@6.2.4 scene.gltf
 import { useEffect } from 'react'
 import { useGLTF } from '@react-three/drei';
 import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useThree } from '@react-three/fiber'
 
 export function Model(props) {
@@ -31,11 +32,9 @@ export function Model(props) {
    let tl = gsap.timeline({
      scrollTrigger: {
        trigger: ".Detail",
-       pin: true, 
        start: "top top",
-       end: "+=1500px",
+       pin: true, 
        toggleActions: 'play none none reverse',
-       scrub: 1,
        ease: "power3.inOut"
      }
     });
