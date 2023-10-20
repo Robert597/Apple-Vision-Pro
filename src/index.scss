@@ -4,6 +4,8 @@
 @import "./Styles/loader.scss";
 @import "./Styles/about.scss";
 @import "./Styles/mobile-nav.scss";
+@import "./Styles/design.scss";
+@import "./Styles/technology.scss";
 
 * {
   box-sizing: border-box;
@@ -11,6 +13,11 @@
   margin: 0;
 }
 
+.yepa{
+  height: 100vh;
+  background-color: red;
+  width: 100vw;
+}
 
 body, html, #root {
  width: 100vw;

@@ -6,7 +6,6 @@ Command: npx gltfjsx@6.2.4 scene.gltf
 import { useEffect } from 'react'
 import { useGLTF } from '@react-three/drei';
 import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useThree } from '@react-three/fiber'
 
 export function Model(props) {
@@ -76,7 +75,7 @@ export function Model(props) {
       stagger: "0.5"
     })
     
-   
+  
     
  
     

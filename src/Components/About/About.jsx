@@ -23,8 +23,8 @@ const About = () => {
             trigger: video,
             toggleClass: 'about-active',
             start: 'top top-=' + (pinAmount.offsetHeight) ,
-            end: 'bottom top-=' + (pinAmount.offsetHeight) ,
-            markers: true
+            end: 'bottom top-=' + (pinAmount.offsetHeight),
+            once: true
            
         })
        });
@@ -34,7 +34,7 @@ const About = () => {
             toggleClass: 'about-active',
             start: 'top center-=' + (pinAmount.offsetHeight),
             end: 'bottom top-=' + (pinAmount.offsetHeight),
-            markers: true
+            once: true
 
         })
        });

@@ -4,7 +4,7 @@ import Vision from '../Canvas/canvas';
 const Detail = () => {
  
   return (
-    <div className='Detail'>
+    <div className='Detail' >
      <div className='detailheader'>
         <h1>
           <span className="title_line">Introducing Apple Vision Pro:</span>
