@@ -1,13 +1,15 @@
 @import './variables.scss';
 .design{
     position: relative;
-    height: 120vh;
     width: 100vw;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    @include breakpoint("xxlg"){
+       height: auto;
+           }
     h2{
         position: absolute;
         width: 50%;
@@ -20,12 +22,32 @@
         span{
             color: #000;
         }
+        @include breakpoint("xxlg"){
+            padding: 40px 0;
+            position: static;
+        }
+        @include breakpoint("sm"){
+          width: 100%;
+          padding: 40px;
+        }
+        @include breakpoint("xsm"){
+            font-size: 18px;
+        }
     }
 
-    img{
+    .design-image{
         width: 60%;
         position: absolute;
         bottom: 0%;
+        @include breakpoint("xxlg"){
+     position: static;
+     transform: translateY(10px);
+     width: 80%;
+        }
+        @include breakpoint("xsm"){
+            width: 90%;
+            transform: translateY(23px);
+        }
     }
 
    .design-text-Content{
@@ -35,6 +57,13 @@
     width: 100%;
     z-index: 10;
     text-align: center;
+    @include breakpoint("xxlg"){
+        position: static;
+        transform: translateY(-60px);
+           }
+    @include breakpoint("xsmm"){
+        transform: translateY(-30px);
+           }
 
     p{
         color: #000;
@@ -49,11 +78,14 @@
         height: 30px;
         line-height: 30px;
 
-          @include breakpoint('sm'){
-           font-size: 24px;
+        @include breakpoint('md'){
+            font-size: 24px;
         }
-          @include breakpoint('xssm'){
-           font-size: 18px;  
+        @include breakpoint('xsm'){
+            font-size: 18px;
+        }
+        @include breakpoint('xsmm'){
+            font-size: 15px;
         }
 
         span{
@@ -73,11 +105,19 @@
             background-color: $tertiary;
             margin-left: 40px;
 
-               @include breakpoint('sm'){
-           margin-left: 20px;
-           width: 60px;
-           height: 60px;
-        }
+            @include breakpoint('md'){
+                width: 70px;
+            height: 70px;
+            margin-left: 20px;
+            }
+            @include breakpoint('xsm'){
+                width: 60px;
+            height: 60px;
+            }
+            @include breakpoint('xsmm'){
+                width: 50px;
+            height: 50px;
+            }
         }
         .design-content-icon{
             fill: #fff;
@@ -85,9 +125,13 @@
             height: 40px;
         z-index: 5;
 
-           @include breakpoint('sm'){
-           width: 20px;
-           height: 20px;
+        @include breakpoint('md'){
+            width: 25px;
+        height: 25px;
+        }
+        @include breakpoint('xsm'){
+            width: 20px;
+        height: 20px;
         }
         }
     }

@@ -11,6 +11,11 @@
     background-color: #000;
     color: #fff;
 
+    @include breakpoint('md'){
+        height: auto;
+        padding: 40px;
+    }
+
     h4{
         font-size: 1.5vw;
         font-weight: 500;
@@ -24,6 +29,15 @@
         font-weight: 500;
         margin-bottom: 3vw;
         font-family: $heading-font;
+
+        @include breakpoint('md'){
+            font-size: 7vw;
+            margin-bottom: 0;
+            padding: 4vw 0;
+        }
+        @include breakpoint('xsmm'){
+            font-size: 8vw;
+        }
     }
 
     p{
@@ -35,6 +49,23 @@
         font-family: $text-font;
         text-align: center;
 
+        @include breakpoint('md'){
+            font-size: 2vw;
+            width: 70%;
+            margin-top: 2vw;
+        }
+        @include breakpoint('xxsm'){
+            font-size: 2.5vw;
+            width: 90%;
+            margin: 2vw 0;
+        }
+        @include breakpoint('xsmm'){
+            font-size: 3vw;
+            width: 100%;
+            margin: 0;
+            padding: 4vw 0;
+        }
+
         span{
             color: #fff;
         }
@@ -43,6 +74,24 @@
         position: relative;
         max-width: 100vw;
         max-height: 100vh;
+
+        @include breakpoint('md'){
+            display: none;
+        }
+    }
+    .tech{
+        display: none;
+        @include breakpoint('md'){
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 6vw;
+            transform: scale(1.3);
+        }
+        @include breakpoint('xsmm'){
+           scale: (1.4);
+           margin-top: 15vw;
+        }
     }
     .technology-text-Content{
         width: 100%;
@@ -64,13 +113,17 @@
             justify-content: center;
             height: 30px;
             line-height: 30px;
-    
-              @include breakpoint('sm'){
-               font-size: 24px;
-            }
-              @include breakpoint('xssm'){
-               font-size: 18px;  
-            }
+    width: 100% ;
+            
+    @include breakpoint('md'){
+        font-size: 24px;
+    }
+    @include breakpoint('xsm'){
+        font-size: 18px;
+    }
+    @include breakpoint('xsmm'){
+        font-size: 15px;
+    }
     
             span{
                 display: inline-block;
@@ -89,11 +142,19 @@
                 background-color: $tertiary;
                 margin-left: 40px;
     
-                   @include breakpoint('sm'){
-               margin-left: 20px;
-               width: 60px;
-               height: 60px;
-            }
+                @include breakpoint('md'){
+                    width: 70px;
+                height: 70px;
+                margin-left: 20px;
+                }
+                @include breakpoint('xsm'){
+                    width: 60px;
+                height: 60px;
+                }
+                @include breakpoint('xsmm'){
+                    width: 50px;
+                height: 50px;
+                }
             }
             .technology-content-icon{
                 fill: #fff;
@@ -101,24 +162,16 @@
                 height: 40px;
             z-index: 5;
     
-               @include breakpoint('sm'){
-               width: 20px;
-               height: 20px;
+            @include breakpoint('md'){
+                width: 25px;
+            height: 25px;
+            }
+            @include breakpoint('xsm'){
+                width: 20px;
+            height: 20px;
             }
             }
         }
 }
     }
-    #page18{
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        top: 0%;
-background-color: #000;
-        canvas{
-            position: relative;
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-      
-}
+   

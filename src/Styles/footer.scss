@@ -1,0 +1,112 @@
+@import "./variables.scss";
+.footer-container{
+background-color: $primary;
+
+.footer-top-content{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    color: $secondary;
+
+    @include breakpoint('md-lg'){
+        flex-wrap: wrap;
+
+    }
+    @include breakpoint('xxsm'){
+        display: block;
+        padding: 20px;
+}
+
+    .footer-title{
+    font-family: $heading-font;
+    line-height: 35px;
+    padding: 20px 0;
+
+    @include breakpoint('xxsm'){
+        text-align: center;
+        width: 100%;
+}
+    h4{
+        font-size: 12px;
+        font-family: $text-font;
+        letter-spacing: 0.05em;
+    }
+    h1{
+        font-size: 45px;
+        position: relative;
+        letter-spacing: -0.05em;
+        span{
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+        }
+    }
+    }
+
+    .footer-menu{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        font-size: 12px;
+        font-family: $text-font;
+        letter-spacing: 0.05em;
+        
+        @include breakpoint('xxsm'){
+            padding: 20px 0;
+            justify-content: center;
+    }
+
+        li{
+            margin-right: 10px;
+        }
+    }
+
+    .footer-shop{
+        font-size: 12px;
+        font-family: $text-font;
+        letter-spacing: 0.05em;
+        text-wrap: wrap;
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint('md-lg'){
+           padding: 20px 0;
+            
+        }
+        
+    @include breakpoint('xxsm'){
+        justify-content: center;
+        line-height: 20px;
+}
+
+        a{
+            color: $tertiary;
+            text-decoration: underline;
+        }
+    }
+}
+
+hr{
+    height: 1px;
+    border: none;
+    background-color: $secondary;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 12px;
+        font-family: $text-font;
+        letter-spacing: 0.05em;
+        color: $secondary;
+
+        @include breakpoint('xxsm'){
+            padding: 20px;
+    }
+        @include breakpoint('xsmm'){
+            font-size: 10px;
+    }
+}
+
+}

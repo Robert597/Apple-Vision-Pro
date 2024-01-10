@@ -1,4 +1,4 @@
-
+import {Link} from "react-router-dom";
 const MobileNav = () => {
     
     
@@ -18,22 +18,22 @@ const MobileNav = () => {
         <div className="primary-menu">
            <div className='nav-menu-container'>
                     <div class="menu-item">
-                        <a href="#"><span className='menu-link'>Home</span></a>
+                        <Link to="/"><span className='menu-link'>Home</span></Link>
                        
                     </div>
 
                     <div class="menu-item">
-                        <a href="#"><span className='menu-link'>Design</span></a>
+                        <Link to="/design"><span className='menu-link'>Design</span></Link>
                        
                     </div>
 
                     <div class="menu-item">
-                        <a href="#"><span className='menu-link'>Technology</span></a>
+                        <Link to="/technology"><span className='menu-link'>Technology</span></Link>
                        
                     </div>
 
                     <div class="menu-item">
-                        <a href="#"><span className='menu-link' >Security</span></a>
+                        <Link to="/security"><span className='menu-link' >Security</span></Link>
                        
                     </div>
                   

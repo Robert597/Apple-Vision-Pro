@@ -3,6 +3,7 @@ import MobileNav from "./Mobile-Nav";
 import Logo from "/vision pro 2/logo.png";
 import {gsap} from 'gsap';
 import CSSRulePlugin from 'gsap/CSSRulePlugin';
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
   useEffect(() => {
@@ -89,10 +90,10 @@ ease: "power3.inOut"
         </div>
 
         <ul className="Navbar-Link-Content">
-            <li><a href="#" data-replace="Home">Home</a></li>
-            <li><a href="#" data-replace="Design">Design</a></li>
-            <li><a href="#" data-replace="Technology">Technology</a></li>
-            <li><a href="#" data-replace="Security">Security</a></li>
+            <li><Link to="/" data-replace="Home">Home</Link></li>
+            <li><Link to="/design" data-replace="Design">Design</Link></li>
+            <li><Link to="/technology" data-replace="Technology">Technology</Link></li>
+            <li><Link to="/security" data-replace="Security">Security</Link></li>
         </ul>
         <button className='navbarButton'>Notify Me</button>
     </div>

@@ -12,48 +12,22 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const About = () => {
-    useEffect(() => {
-    let pinAmount = document.querySelector(".Detail");
-    console.log(pinAmount);
-       const videos = gsap.utils.toArray('.about-video-lg');
-       const videos1 = gsap.utils.toArray('.about-video-sm');
-    
-       videos.forEach((video) => {
-        ScrollTrigger.create({
-            trigger: video,
-            toggleClass: 'about-active',
-            start: 'top top-=' + (pinAmount.offsetHeight) ,
-            end: 'bottom top-=' + (pinAmount.offsetHeight),
-            once: true
-           
-        })
-       });
-       videos1.forEach((video) => {
-        ScrollTrigger.create({
-            trigger: video,
-            toggleClass: 'about-active',
-            start: 'top center-=' + (pinAmount.offsetHeight),
-            end: 'bottom top-=' + (pinAmount.offsetHeight),
-            once: true
-
-        })
-       });
-       
-    }, [])
+   
     
   return (
     <div className='AboutContainer'>
-        <div className='aboutVideoContainer aboutVideoContainer1'>
-            <div className="about-video-lg about-video-lg1">
-                <video  src={Video3} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto' className='aboutVideo'>
+        <div className='aboutVideoContainer'>
+            <div className="about-video-lg">
+               
+                <video  src={Video3} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto' className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                    <p>Welcome to the Era of Spatial Computing</p> 
                 </div>
             </div>
-            <div className='about-video-md'>
-            <div className="about-video-sm about-video-sm1">
-            <video  src={Video2} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            
+            <div className="about-video-lg">
+            <video  src={Video2} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -61,29 +35,27 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="about-video-sm about-video-sm2">
-            <video  src={Video5} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            <div className="about-video-lg">
+            <video  src={Video5} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                 <p>so you can do the things you love in ways never possible.</p>
                 </div>
             </div>
-            </div>
-        </div>
+        
 
-        <div className='aboutVideoContainer aboutVideoContainer2'>
-            <div className="about-video-lg about-video-lg2">
-            <video  src={Video7} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            <div className="about-video-lg ">
+            <video  src={Video7} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                     <p>Get on the same page in the same space.</p>
                 </div>
             </div>
-            <div className='about-video-md'>
-            <div className="about-video-sm about-video-sm3">
-            <video  src={Video8} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+          
+            <div className="about-video-lg">
+            <video  src={Video8} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -91,29 +63,29 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="about-video-sm about-video-sm4">
-            <video  src={Video6} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            <div className="about-video-lg">
+            <video  src={Video6} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                     <p>Be in the moment all over again.</p>
                 </div>
             </div>
-            </div>
-        </div>
+         
+       
 
-        <div className='aboutVideoContainer aboutVideoContainer3'>
-            <div className="about-video-lg about-video-lg3">
-            <video  src={Video4} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+       
+            <div className="about-video-lg">
+            <video  src={Video4} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                     <p>Free your desktop and your apps will follow.</p>
                 </div>
             </div>
-            <div className='about-video-md'>
-            <div className="about-video-sm about-video-sm5">
-            <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            
+            <div className="about-video-lg">
+            <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -121,8 +93,8 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="about-video-sm about-video-sm6">
-            <video  src={Video1} onLoadedMetadata="this.muted = true" playsInline autoPlay muted loop preload='auto'
+            <div className="about-video-lg">
+            <video  src={Video1} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -130,7 +102,7 @@ const About = () => {
                 </div>
             </div>
             </div>
-        </div>
+        
     </div>
   )
 }

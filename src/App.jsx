@@ -1,12 +1,11 @@
-import Detail from "./Components/Details/detail";
 import {gsap} from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Navbar/Navbar";
 import { useEffect, useRef } from "react";
-import About from "./Components/About/About";
-import Design from "./Components/Sections/Design";
-import Technology from "./Components/Sections/Technology";
+import Footer from "./Components/Footer/Footer";
+import {Route, Routes, useLocation} from "react-router-dom";
+import Home from "./Pages/Home";
+import {AnimatePresence} from 'framer-motion';
 
 
 
@@ -19,18 +18,21 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
-  
+  const location = useLocation();
 
   return (
  
    <div className="App">
      <Navbar/>
-    <Banner/>
-    <Detail/>
-    <About/>
-    <Design/>
-    <Technology/>
-    <div className="yepa">Yeah</div>
+     <AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home/>} />
+        <Route path="/design" element={<div>Welcome</div>} />
+        <Route path="/technology" element={<Home/>} />
+        <Route path="/security" element={<Home/>} />
+      </Routes>
+      </AnimatePresence>
+    <Footer/>
 </div>
   )
 }
