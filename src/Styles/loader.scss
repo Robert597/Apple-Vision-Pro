@@ -7,14 +7,16 @@
     bottom: 0;
     z-index: 40;
     background: $tertiary;
-    }
+
     svg{
-      width: 100vw;
-      height: 110vh;
+        width: 100vw;
+        height: 110vh;
+      }
+      svg path{
+        fill: $tertiary;
+      }
     }
-    svg path{
-      fill: $tertiary;
-    }
+  
     .overlay-text{
       position: absolute;
       bottom: 20%;

@@ -1,6 +1,6 @@
 import {gsap} from 'gsap';
 import { useEffect } from 'react';
-const Loader = ({timeline}) => {
+const Loader = ({timeline, setStartAnim}) => {
    
     
     useEffect(() => {
@@ -18,6 +18,7 @@ const Loader = ({timeline}) => {
             if(percent >= 100){
               clearInterval(id);
               timeline.play();
+              setStartAnim(true);
             }else{
               percent++;
         elementP.textContent = `${percent}%`;
