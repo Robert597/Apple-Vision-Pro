@@ -112,8 +112,7 @@ trigger: "#page17",
 
 //   set start end according to preference
 start: `center+=200 top`,
-end: `bottom top`,
-markers: true
+end: `bottom top`
 });
 
 

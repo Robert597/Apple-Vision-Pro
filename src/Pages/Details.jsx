@@ -43,7 +43,7 @@ const Details = ({selected, title}) => {
               <div className='inner-slider-img'>
                 {
                   item?.video ? (
-                    <video  src={`/vision pro 2/${item.image}`} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
+                    <video  src={`/vision pro 2/${item.image}`}  playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                   ) : (

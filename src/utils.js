@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import {useLocation} from "react-router-dom";
 export const design = [
     {
         image: "design.mp4",
@@ -61,3 +63,12 @@ export const security = [
         text: `<p><span className="slider-text-color"style="color: #F25922; ">Eye input</span> is not shared with Apple, third-party apps, or websites. Only your final selections are transmitted when you tap your fingers together.</p>`
     } 
 ]
+
+export default function ScrollToTop() {
+const {pathname} = useLocation();
+ useEffect(() => {
+ window.scrollTo(0, 0);
+ }, [pathname]);
+ 
+ return null;
+}

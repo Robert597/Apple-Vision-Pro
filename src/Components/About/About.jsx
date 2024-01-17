@@ -19,7 +19,7 @@ const About = () => {
         <div className='aboutVideoContainer'>
             <div className="about-video-lg">
                
-                <video  src={Video3} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto' className='aboutVideo'>
+                <video  src={Video3}  playsInline autoPlay  muted loop preload='auto' className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
                    <p>Welcome to the Era of Spatial Computing</p> 
@@ -27,7 +27,7 @@ const About = () => {
             </div>
             
             <div className="about-video-lg">
-            <video  src={Video2} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
+            <video  src={Video2}  playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -36,7 +36,7 @@ const About = () => {
             </div>
 
             <div className="about-video-lg">
-            <video  src={Video5} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
+            <video  src={Video5}  playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -46,7 +46,7 @@ const About = () => {
         
 
             <div className="about-video-lg ">
-            <video  src={Video7} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
+            <video  src={Video7}  playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -55,7 +55,7 @@ const About = () => {
             </div>
           
             <div className="about-video-lg">
-            <video  src={Video8} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
+            <video  src={Video8}  playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -64,7 +64,7 @@ const About = () => {
             </div>
 
             <div className="about-video-lg">
-            <video  src={Video6} onLoadedMetadata="this.muted = true" playsInline autoPlay   muted loop preload='auto'
+            <video  src={Video6}  playsInline autoPlay   muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -76,7 +76,7 @@ const About = () => {
 
        
             <div className="about-video-lg">
-            <video  src={Video4} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
+            <video  src={Video4}  playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -85,7 +85,7 @@ const About = () => {
             </div>
             
             <div className="about-video-lg">
-            <video  src={Video9} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
+            <video  src={Video9}  playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>
@@ -94,7 +94,7 @@ const About = () => {
             </div>
 
             <div className="about-video-lg">
-            <video  src={Video1} onLoadedMetadata="this.muted = true" playsInline autoPlay  muted loop preload='auto'
+            <video  src={Video1}  playsInline autoPlay  muted loop preload='auto'
             className='aboutVideo'>
                 </video>
                 <div className='about-video-content'>

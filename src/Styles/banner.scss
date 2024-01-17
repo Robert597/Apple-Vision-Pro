@@ -24,11 +24,12 @@
     }
 }
 .banner-title{
+    width: 100%;
     font-family: $heading-font;
     font-size: 240px;
     line-height: 260px;
     height: 260px;
-    overflow: hidden;
+    overflow : hidden;
     text-align: center;
      
     color: $complementary;
@@ -65,9 +66,9 @@
         height: 100px;
     }
     @include breakpoint("xss"){
-        font-size: 70px;
-        line-height: 90px;
-        height: 90px;
+        font-size: 65px;
+        line-height: 85px;
+        height: 85px;
     }
     @include breakpoint("xs"){
         font-size: 60px;
