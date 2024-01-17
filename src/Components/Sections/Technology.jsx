@@ -3,8 +3,10 @@ import {gsap} from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Arrow from '/vision pro 2/Arrow 1.svg';
 import Tech from '/Apple vision canvas images/Vision00025.png';
+import {useNavigate} from "react-router-dom";
 
 const Technology = () => {
+  const navigate = useNavigate();
 useEffect(() => {
     let pinAmount = document.querySelector(".Detail");
  const canvas1 = () => {
@@ -129,7 +131,9 @@ end: `bottom top`
         </p>
         <canvas id="canvas"></canvas>
         <img src={Tech} alt="mobile-graphic" className='tech'/>
-        <div className='technology-text-Content'>
+        <div className='technology-text-Content' onClick={() => {
+            navigate('/technology');
+          }}>
         <p>Learn more about <span className='text-content-technology'> Technology</span> <span className='technology-content-button'><img src={Arrow} className='technology-content-icon'/></span> </p>
        </div>
        </div>

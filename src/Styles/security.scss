@@ -119,7 +119,7 @@ padding-top: 30px;
                 align-items: center;
                 background-color: $tertiary;
                 margin-left: 40px;
-    
+                cursor: pointer;
                 @include breakpoint('md'){
                     width: 70px;
                 height: 70px;

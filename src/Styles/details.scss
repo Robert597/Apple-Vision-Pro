@@ -141,8 +141,12 @@ color: #F25922;
   
     .float-Left, .float-right{
         position: absolute;
-       mix-blend-mode: difference;
-       color: $secondary;
+       color: $primary;
+
+       @include breakpoint("md"){
+        mix-blend-mode: difference;
+        color: $secondary;
+       }
        
     h1{
         position: relative;

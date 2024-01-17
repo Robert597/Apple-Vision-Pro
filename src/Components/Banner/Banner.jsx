@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import Vision from "/vision pro 2/apple_vision_main2.png";
 import "../../Styles/banner.scss";
-import {gsap} from 'gsap';
 import { FiArrowUpRight} from "react-icons/fi";
+import {useNavigate} from 'react-router-dom';
 const Banner = () => {
- 
+ const navigate = useNavigate();
  
 return (
     <div className="banner">
@@ -25,11 +25,15 @@ return (
           <p className="banner-content-content"><span className="banner-content-up">You&apos;ve never seen everything like this before.</span></p>
         </div>
         <div className="banner-buttons">
-          <button className="banner-button">
+          <button className="banner-button" onClick={() => {
+            navigate('/design');
+          }}>
             <span className="banner-button-text">Learn about design </span>
             <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
           </button>
-          <button className="banner-button">
+          <button className="banner-button" onClick={() => {
+            navigate('/technology');
+          }}>
           <span className="banner-button-text">Learn about technology </span> <span className="iconContainer"><FiArrowUpRight className="banner-button-icon"/></span>
           </button>
         </div>

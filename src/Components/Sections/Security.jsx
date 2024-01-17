@@ -1,8 +1,10 @@
 import React from 'react';
 import Arrow from '/vision pro 2/Arrow 1.svg';
-import { BsLock } from "react-icons/bs"; 
+import { BsLock } from "react-icons/bs";
+import {useNavigate} from 'react-router-dom' 
 
 const Security = () => {
+  const navigate = useNavigate();
   return (
     <div className='securityContainer'>
       
@@ -17,7 +19,9 @@ const Security = () => {
             </div>
         </div>
 
-        <div className='security-text-Content'>
+        <div className='security-text-Content' onClick={() => {
+            navigate('/security');
+          }}>
         <p>Learn more about <span className='text-content-security'>Privacy and Security</span> <span className='technology-content-button'><img src={Arrow} className='technology-content-icon'/></span> </p>
        </div>
     </div>
